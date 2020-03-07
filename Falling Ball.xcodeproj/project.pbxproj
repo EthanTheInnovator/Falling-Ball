@@ -13,12 +13,16 @@
 		E92CCDAA23F4389900CFB230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92CCDA823F4389900CFB230 /* Main.storyboard */; };
 		E92CCDAC23F4389A00CFB230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92CCDAB23F4389A00CFB230 /* Assets.xcassets */; };
 		E92CCDAF23F4389A00CFB230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92CCDAD23F4389A00CFB230 /* LaunchScreen.storyboard */; };
+		E97D979A240EAC6600F1C1A9 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D9799240EAC6600F1C1A9 /* AchievementsView.swift */; };
+		E97D979C240EB05100F1C1A9 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97D979B240EB05100F1C1A9 /* ProgressBar.swift */; };
+		E98D205524112DF000F26766 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98D205424112DF000F26766 /* Achievement.swift */; };
 		E9A86E7523FE1E6600013B72 /* CollisionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A86E7423FE1E6600013B72 /* CollisionCategory.swift */; };
 		E9ADB0F423FE2C1000B4B20B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADB0F323FE2C1000B4B20B /* WelcomeViewController.swift */; };
 		E9ADB0F623FE2D2300B4B20B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADB0F523FE2D2300B4B20B /* UserSettings.swift */; };
 		E9ADB0F823FE2D2C00B4B20B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADB0F723FE2D2C00B4B20B /* UserDefault.swift */; };
 		E9ADB0FA23FE2D6900B4B20B /* PlayerScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ADB0F923FE2D6900B4B20B /* PlayerScore.swift */; };
 		E9B4660323F445EB004D27D4 /* CGVectorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B4660223F445EB004D27D4 /* CGVectorExtension.swift */; };
+		E9FF75F924131E7D00809298 /* AchievementsViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FF75F824131E7D00809298 /* AchievementsViewHostingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +34,16 @@
 		E92CCDAB23F4389A00CFB230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E92CCDAE23F4389A00CFB230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E92CCDB023F4389A00CFB230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E97D9799240EAC6600F1C1A9 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		E97D979B240EB05100F1C1A9 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		E98D205424112DF000F26766 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		E9A86E7423FE1E6600013B72 /* CollisionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionCategory.swift; sourceTree = "<group>"; };
 		E9ADB0F323FE2C1000B4B20B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E9ADB0F523FE2D2300B4B20B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		E9ADB0F723FE2D2C00B4B20B /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		E9ADB0F923FE2D6900B4B20B /* PlayerScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScore.swift; sourceTree = "<group>"; };
 		E9B4660223F445EB004D27D4 /* CGVectorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGVectorExtension.swift; sourceTree = "<group>"; };
+		E9FF75F824131E7D00809298 /* AchievementsViewHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewHostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				E9ADB0F323FE2C1000B4B20B /* WelcomeViewController.swift */,
+				E9FF75F824131E7D00809298 /* AchievementsViewHostingController.swift */,
 				E9ADB0F523FE2D2300B4B20B /* UserSettings.swift */,
+				E98D205424112DF000F26766 /* Achievement.swift */,
+				E97D9799240EAC6600F1C1A9 /* AchievementsView.swift */,
+				E97D979B240EB05100F1C1A9 /* ProgressBar.swift */,
 				E9ADB0F923FE2D6900B4B20B /* PlayerScore.swift */,
 				E9ADB0F723FE2D2C00B4B20B /* UserDefault.swift */,
 				E92CCD9E23F4389900CFB230 /* AppDelegate.swift */,
@@ -157,8 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ADB0F823FE2D2C00B4B20B /* UserDefault.swift in Sources */,
+				E97D979C240EB05100F1C1A9 /* ProgressBar.swift in Sources */,
 				E9B4660323F445EB004D27D4 /* CGVectorExtension.swift in Sources */,
+				E97D979A240EAC6600F1C1A9 /* AchievementsView.swift in Sources */,
 				E9A86E7523FE1E6600013B72 /* CollisionCategory.swift in Sources */,
+				E9FF75F924131E7D00809298 /* AchievementsViewHostingController.swift in Sources */,
+				E98D205524112DF000F26766 /* Achievement.swift in Sources */,
 				E92CCDA523F4389900CFB230 /* GameScene.swift in Sources */,
 				E9ADB0FA23FE2D6900B4B20B /* PlayerScore.swift in Sources */,
 				E9ADB0F423FE2C1000B4B20B /* WelcomeViewController.swift in Sources */,

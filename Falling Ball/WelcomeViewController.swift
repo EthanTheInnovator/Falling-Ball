@@ -38,24 +38,34 @@
 
 
 import UIKit
+import SwiftUI
 
 class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
+    // MARK: - Outlets
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var highScoresLabel: UILabel!
     @IBOutlet weak var highScoresTableView: UITableView!
     
+    // MARK: - Variables
     let userSettings = UserSettings()
     
+    // MARK: - Setup
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome to Stacker!\nEnter your name to play:"
-//        userSettings.highScores.append(PlayerScore(name: "Ethan", score: 27))
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Buttons
+    @IBAction func achievementsButtonPressed(_ sender: UIBarButtonItem) {
+        let achievementsHostingController = AchievementsViewHostingController()
+        present(achievementsHostingController, animated: true, completion: nil)
+    }
+    
+    // MARK: - TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userSettings.highScores.count
     }

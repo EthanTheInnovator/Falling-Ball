@@ -36,11 +36,28 @@ class GameViewController: UIViewController {
     
     func endGame() {
         if let welcomeNav = presentingViewController as? UINavigationController, let welcomeVC = welcomeNav.topViewController as? WelcomeViewController {
+            calculateAchievements(highScores: welcomeVC.userSettings.highScores)
+            
             let playerName = welcomeVC.nameTextField.text!
             welcomeVC.userSettings.highScores.append(PlayerScore(name: playerName, score: gameScene!.score))
             welcomeVC.nameTextField.text = ""
             welcomeVC.highScoresTableView.reloadData()
             dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func calculateAchievements(highScores: [PlayerScore]) {
+        if highScores.count >= 10 && highScores.first!.score < gameScene!.score {
+                Achievement.kingAchievement.currentProgress = 1
+                Achievement.earnAchievement(.kingAchievement)
+        }
+        Achievement.casualAchievement.currentProgress += 1
+        Achievement.addictAchievement.currentProgress += 1
+        if Achievement.casualAchievement.currentProgress >= Achievement.casualAchievement.goalThreshold {
+            Achievement.earnAchievement(.casualAchievement)
+        }
+        if Achievement.addictAchievement.currentProgress >= Achievement.addictAchievement.goalThreshold {
+            Achievement.earnAchievement(.addictAchievement)
         }
     }
 

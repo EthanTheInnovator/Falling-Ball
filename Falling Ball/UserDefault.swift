@@ -11,7 +11,7 @@ import Combine
 
 @propertyWrapper
 struct UserDefault<T> {
-    let key: String
+    public var key: String
     let defaultValue: T
 
     init(_ key: String, defaultValue: T) {

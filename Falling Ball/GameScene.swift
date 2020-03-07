@@ -120,56 +120,68 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initializeBorders() {
-           let leftBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: -view!.frame.width/2, y: view!.frame.height/2), to: CGPoint(x: -view!.frame.width/2, y: -view!.frame.height/2))
+        let leftBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: -view!.frame.width/2, y: view!.frame.height/2), to: CGPoint(x: -view!.frame.width/2, y: -view!.frame.height/2))
         leftBorderBody.categoryBitMask = CollisionCategory.sideWall
-           let leftBorder = SKNode()
-           leftBorder.physicsBody = leftBorderBody
-           addChild(leftBorder)
-           
-           let rightBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: view!.frame.width/2, y: view!.frame.height/2), to: CGPoint(x: view!.frame.width/2, y: -view!.frame.height/2))
+        let leftBorder = SKNode()
+        leftBorder.physicsBody = leftBorderBody
+        addChild(leftBorder)
+        
+        let rightBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: view!.frame.width/2, y: view!.frame.height/2), to: CGPoint(x: view!.frame.width/2, y: -view!.frame.height/2))
         rightBorderBody.categoryBitMask = CollisionCategory.sideWall
-           let rightBorder = SKNode()
-           rightBorder.physicsBody = rightBorderBody
-           addChild(rightBorder)
-           
-           let bottomBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: -view!.frame.width/2, y: -view!.frame.height/2), to: CGPoint(x: view!.frame.width/2, y: -view!.frame.height/2))
+        let rightBorder = SKNode()
+        rightBorder.physicsBody = rightBorderBody
+        addChild(rightBorder)
+        
+        let bottomBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: -view!.frame.width/2, y: -view!.frame.height/2), to: CGPoint(x: view!.frame.width/2, y: -view!.frame.height/2))
         bottomBorderBody.categoryBitMask = CollisionCategory.bottomWall
-           let bottomBorder = SKNode()
-           bottomBorder.physicsBody = bottomBorderBody
-           addChild(bottomBorder)
-           
-           let topBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: -view!.frame.width/2, y: view!.frame.height/2), to: CGPoint(x: view!.frame.width/2, y: view!.frame.height/2))
+        let bottomBorder = SKNode()
+        bottomBorder.physicsBody = bottomBorderBody
+        addChild(bottomBorder)
+        
+        let topBorderBody = SKPhysicsBody(edgeFrom: CGPoint(x: -view!.frame.width/2, y: view!.frame.height/2), to: CGPoint(x: view!.frame.width/2, y: view!.frame.height/2))
         topBorderBody.categoryBitMask = CollisionCategory.topWall
-           let topBorder = SKNode()
-           topBorder.physicsBody = topBorderBody
-           addChild(topBorder)
-       }
-       
-       func createPlayer() {
-           player = SKShapeNode(circleOfRadius: 20)
-           player.fillColor = .systemPurple
-           player.position = CGPoint(x: 0, y: 0)
-           player.lineWidth = 0
+        let topBorder = SKNode()
+        topBorder.physicsBody = topBorderBody
+        addChild(topBorder)
+    }
+    
+    func createPlayer() {
+        player = SKShapeNode(circleOfRadius: 20)
+        player.fillColor = .systemPurple
+        player.position = CGPoint(x: 0, y: 0)
+        player.lineWidth = 0
         player.zPosition = 9
-           player.physicsBody = SKPhysicsBody(circleOfRadius: 20)
-           player.physicsBody?.affectedByGravity = false
-            player.physicsBody?.categoryBitMask = CollisionCategory.ball
+        player.physicsBody = SKPhysicsBody(circleOfRadius: 20)
+        player.physicsBody?.affectedByGravity = false
+        player.physicsBody?.categoryBitMask = CollisionCategory.ball
         player.physicsBody?.contactTestBitMask = CollisionCategory.all
         player.physicsBody?.collisionBitMask = CollisionCategory.bottomWall | CollisionCategory.sideWall | CollisionCategory.topWall | CollisionCategory.platform
-           addChild(player)
-       }
-       
-        func createScoreLabel() {
-             scoreLabel = SKLabelNode(attributedText: getLabelFormattedText("Score: \(score)"))
-            scoreLabel.fontColor = .label
-            scoreLabel.position = CGPoint(x: -self.size.width/2 + 30, y: self.size.height/2 - 70)
-            scoreLabel.horizontalAlignmentMode = .left
-            scoreLabel.zPosition = 10
-            addChild(scoreLabel)
-        }
+        addChild(player)
+    }
+    
+    func createScoreLabel() {
+        scoreLabel = SKLabelNode(attributedText: getLabelFormattedText("Score: \(score)"))
+        scoreLabel.fontColor = .label
+        scoreLabel.position = CGPoint(x: -self.size.width/2 + 30, y: self.size.height/2 - 70)
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.zPosition = 10
+        addChild(scoreLabel)
+    }
     
     func updateScoreLabel() {
         scoreLabel.attributedText = getLabelFormattedText("Score: \(score)")
+        if score >= Achievement.beginnerAchievement.currentProgress {
+            Achievement.beginnerAchievement.currentProgress = score
+            if score >= Achievement.beginnerAchievement.goalThreshold {
+                Achievement.earnAchievement(.beginnerAchievement)
+            }
+        }
+        if score >= Achievement.trueGamerAchievement.currentProgress {
+            Achievement.trueGamerAchievement.currentProgress = score
+            if score >= Achievement.trueGamerAchievement.goalThreshold {
+                Achievement.earnAchievement(.trueGamerAchievement)
+            }
+        }
     }
     
     func getLabelFormattedText(_ originalString: String) -> NSAttributedString {

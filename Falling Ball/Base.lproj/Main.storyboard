@@ -90,7 +90,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eTT-QB-0Jw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stacker" id="UCx-QU-c5C"/>
+                    <navigationItem key="navigationItem" title="Stacker" id="UCx-QU-c5C">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="achievements" id="Yy3-aU-svD">
+                            <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="achievementsButtonPressed:" destination="CNK-op-aMo" id="Dgn-Nf-r6m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="highScoresLabel" destination="Jeq-dJ-gcw" id="tNR-MF-eFZ"/>
                         <outlet property="highScoresTableView" destination="hYt-6t-9hN" id="1qp-Mn-TEQ"/>
@@ -133,4 +140,7 @@
             <point key="canvasLocation" x="139" y="131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="achievements" width="25" height="25"/>
+    </resources>
 </document>
