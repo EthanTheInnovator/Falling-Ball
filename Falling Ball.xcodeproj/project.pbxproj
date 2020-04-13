@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91E9F2B24190694003C77C4 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E9F2A24190694003C77C4 /* ShareSheet.swift */; };
+		E91E9F2D24190754003C77C4 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E9F2C24190754003C77C4 /* UIViewExtension.swift */; };
+		E91E9F33241907C7003C77C4 /* AchievementsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E9F32241907C7003C77C4 /* AchievementsRowView.swift */; };
 		E92CCD9F23F4389900CFB230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CCD9E23F4389900CFB230 /* AppDelegate.swift */; };
 		E92CCDA523F4389900CFB230 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CCDA423F4389900CFB230 /* GameScene.swift */; };
 		E92CCDA723F4389900CFB230 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CCDA623F4389900CFB230 /* GameViewController.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91E9F2A24190694003C77C4 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		E91E9F2C24190754003C77C4 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E91E9F32241907C7003C77C4 /* AchievementsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsRowView.swift; sourceTree = "<group>"; };
 		E92CCD9B23F4389900CFB230 /* Falling Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Falling Ball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92CCD9E23F4389900CFB230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E92CCDA423F4389900CFB230 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -82,10 +88,13 @@
 				E98D205424112DF000F26766 /* Achievement.swift */,
 				E97D9799240EAC6600F1C1A9 /* AchievementsView.swift */,
 				E97D979B240EB05100F1C1A9 /* ProgressBar.swift */,
+				E91E9F2A24190694003C77C4 /* ShareSheet.swift */,
+				E91E9F32241907C7003C77C4 /* AchievementsRowView.swift */,
 				E9ADB0F923FE2D6900B4B20B /* PlayerScore.swift */,
 				E9ADB0F723FE2D2C00B4B20B /* UserDefault.swift */,
 				E92CCD9E23F4389900CFB230 /* AppDelegate.swift */,
 				E92CCDA423F4389900CFB230 /* GameScene.swift */,
+				E91E9F2C24190754003C77C4 /* UIViewExtension.swift */,
 				E9B4660223F445EB004D27D4 /* CGVectorExtension.swift */,
 				E92CCDA623F4389900CFB230 /* GameViewController.swift */,
 				E9A86E7423FE1E6600013B72 /* CollisionCategory.swift */,
@@ -168,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91E9F2D24190754003C77C4 /* UIViewExtension.swift in Sources */,
 				E9ADB0F823FE2D2C00B4B20B /* UserDefault.swift in Sources */,
 				E97D979C240EB05100F1C1A9 /* ProgressBar.swift in Sources */,
+				E91E9F33241907C7003C77C4 /* AchievementsRowView.swift in Sources */,
 				E9B4660323F445EB004D27D4 /* CGVectorExtension.swift in Sources */,
 				E97D979A240EAC6600F1C1A9 /* AchievementsView.swift in Sources */,
 				E9A86E7523FE1E6600013B72 /* CollisionCategory.swift in Sources */,
@@ -181,6 +192,7 @@
 				E9ADB0F623FE2D2300B4B20B /* UserSettings.swift in Sources */,
 				E92CCDA723F4389900CFB230 /* GameViewController.swift in Sources */,
 				E92CCD9F23F4389900CFB230 /* AppDelegate.swift in Sources */,
+				E91E9F2B24190694003C77C4 /* ShareSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,28 +17,7 @@ struct AchievementsView: View {
         NavigationView {
             List {
                 ForEach (allAchievements) { achievement in
-                    VStack {
-                        HStack {
-                            Image(achievement.imageName)
-                            Text(achievement.name)
-                            Spacer()
-                            if achievement.progress >= 1 {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(Color(.systemGreen))
-                            }
-                        }
-                        .font(.headline)
-                        Divider()
-                        HStack {
-                            Text(achievement.description)
-                                .multilineTextAlignment(.leading)
-                            Spacer()
-                        }
-                        ProgressBar(value: achievement.progress, accentColor: achievement.progress >= 1 ? Color(.systemGreen) : Color(.systemPurple))
-                    }
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(30)
+                    AchievementsRowView(achievement: achievement)
                 }
             }
             .navigationBarTitle("Achievements")
